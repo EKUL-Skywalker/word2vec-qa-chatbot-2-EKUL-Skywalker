@@ -5,14 +5,14 @@ import gensim
 import numpy as np
 
 # load question-answer dataset 
-df = pd.read_csv("data/Question_Answer_Dataset_v1.2_S10.csv")
+df = pd.read_csv("/workspaces/word2vec-qa-chatbot-2-EKUL-Skywalker/data/Question_Answer_Dataset_v1.2_S10.csv")
 
 # load question vector
-vector = np.load('data/vector.npz')
+vector = np.load('/workspaces/word2vec-qa-chatbot-2-EKUL-Skywalker/data/vector.npz')
 ques_vec = vector['x']
 
 # load th trained word2vec model 
-trained_w2v = gensim.models.Word2Vec.load("data/w2v.model")
+trained_w2v = gensim.models.Word2Vec.load("/workspaces/word2vec-qa-chatbot-2-EKUL-Skywalker/data/w2v.model")
 
 # App title
 st.set_page_config(page_title="Word2vec Question and Answer Chatbot")
